@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.burger-menu {
+  display: none;
+  cursor: pointer;
+}
+.burger-menu i {
+  font-size: 25px;
+}
+.header {
+  background-color: #fff;
+  padding: 15px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+}
+.navbar li {
+  padding: 0 15px;
+}
+.navbar li a {
+  text-decoration: none;
+  color: black;
+  transition: ease 0.3s;
+}
+.navbar li a:hover {
+  color: #e84242;
+  transition: ease 0.3s;
+}
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+.header-icons i {
+  margin: 0 5px;
+  font-size: 20px;
+  transition: ease 0.3s;
+  cursor: pointer;
+}
+.header-icons i:hover {
+  transform: translateY(-3px);
+  color: #e84242;
+  transition: ease 0.3s;
+}
+.home {
+  background: url(../img/background.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 0 7%;
+}
+.home-text {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-text h1 {
+  font-size: 65px;
+}
+.home-btn {
+  display: inline-block;
+  background-color: #e84242;
+  border-radius: 70px;
+  opacity: 0.75;
+  padding: 12px 0;
+  text-decoration: none;
+  color: white;
+  width: 120px;
+  text-align: center;
+  margin-top: 10px;
+  transition: ease 0.3s;
+}
+.home-btn:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  transition: ease 0.3s;
+}
+.discount {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  align-items: center;
+  gap: 2rem;
+  padding: 20px 7%;
+}
+.discount-img {
+  overflow: hidden;
+}
+.discount-img img {
+  width: 100%;
+  transition: ease 0.3s;
+  cursor: pointer;
+  display: block;
+}
+.discount-img:hover img {
+  transform: scale(1.1);
+  transition: ease 0.3s;
+}
+.flowers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  align-items: center;
+  gap: 2rem;
+}
+.flowers-content {
+  padding: 20px 7%;
+}
+.flowers-img {
+  position: relative;
+}
+.flowers-img img {
+  width: 100%;
+  display: block;
+}
+.hot {
+  padding: 5px 10px;
+  background-color: #e84242;
+  color: white;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+.card {
+  padding: 5px 0;
+  background-color: rgba(0, 0, 0, 0.47);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  display: none;
+}
+.flowers-items:hover .card {
+  display: block;
+}
+
+.content-blog {
+  padding: 20px 7%;
+}
+.history-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.blogs-items img {
+  width: 100%;
+}
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  align-items: center;
+  gap: 2rem;
+}
+@media screen and (max-width: 960px) {
+  .header {
+    padding: 15px 3%;
+    transition: ease 0.3s;
+  }
+  .home {
+    transition: ease 0.3s;
+    padding: 0 3%;
+  }
+  .discount {
+    transition: ease 0.3s;
+    padding: 20px 3%;
+  }
+  .flowers-content {
+    transition: ease 0.3s;
+    padding: 20px 3%;
+  }
+  .content-blog {
+    transition: ease 0.3s;
+    padding: 20px 3%;
+  }
+}
+@media screen and (max-width: 840px) {
+  .burger-menu {
+    display: block;
+  }
+  .header-icons {
+    position: absolute;
+    top: 70px;
+    transform: scale(0);
+    transition: ease 0.3s;
+  }
+  .navbar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    top: 60px;
+    align-items: flex-start;
+    justify-content: center;
+    left: 0;
+    padding: 0 30px;
+    transform: scale(0);
+    transition: ease 0.3s;
+  }
+  .active {
+    transform: scale(100%);
+    transition: ease 0.3s;
+  }
+  .navbar li {
+    padding: 7px 0;
+  }
+}
+@media screen and (max-width: 533px) {
+  .home-text h1 {
+    font-size: 40px;
+  }
+  .home-text p {
+    font-size: 14px;
+  }
+}
